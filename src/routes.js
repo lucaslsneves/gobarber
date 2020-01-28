@@ -10,6 +10,8 @@ import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import NotificationController from './app/controllers/NotificationController';
 import AvailableController from './app/controllers/AvailableController';
+import ForgotPasswordController from './app/controllers/ForgotPasswordController';
+import ResetPasswordController from './app/controllers/ResetPasswordController';
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -17,7 +19,8 @@ const upload = multer(multerConfig);
 
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
-
+routes.post('/forgot_password', ForgotPasswordController.store);
+routes.post('/reset_password', ResetPasswordController.store);
 routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
