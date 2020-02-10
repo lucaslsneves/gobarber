@@ -123,4 +123,12 @@ http://localhost:3334/providers/4/available?date=1580152344759
 |                                  |        |        |            |                                                                                                                                                                               |                                                                     |
 |                                  |        |        |            |                                                                                                                                                                               |                                                                     |
 
+## Forgot Password
 
+- Gerar token de recuperação de senha
+
+| ENDPOINT         | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                    | ERROR RESPONSE                                                                                                                                                         |
+|------------------|---------|--------|------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /forgot_password | `POST` | -      | -          | **Code**: 200 <br/> __Content__:   ` { password_reset_token: User, password_reset_expires: User } ` | __Code__: 400<br/>   __Content__: ` { error: ' Validation fails ' }` <br/><br/> or <br/><br/>  __Code__: 400<br/>   __Content__: ` { error: ' Email doesnt exists ' }` |
+|                  |         |        |            |                                                                                                     |                                                                                                                                                                        |
+|                  |         |        |            |                                                                                                     |                                                                                                                                                                        |
