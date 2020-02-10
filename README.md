@@ -92,3 +92,21 @@ http://localhost:3334/schedule?date=2020-01-31T00%3A00%3A00-03%3A00
 | /schedule | ``GET`` |  -   | date  | **Code**: 200 <br/> __Content__:   ` { Appointment, user: { name: User } } ` | __Code__: 401 <br/>   __Content__: ` { error: ' User is not a provider ' }`    |
 |           |         |        |            |                                                                              |                                                                                |
 |           |         |        |            |                                                                              |                                                                                |
+
+## Notification
+
+- Listar todas as notificações do prestador de serviços logado
+
+| ENDPOINT       | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                               | ERROR RESPONSE                                                                              |
+|----------------|---------|--------|------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| /notifications | ``GET`` | -      | -          | **Code**: 200 <br/> __Content__:   ` [Array de Notification] ` | __Code__: 401 <br/>   __Content__: ` { error: ' Only provider can load notifications ' }`   |
+|                |         |        |            |                                                                |                                                                                             |
+|                |         |        |            |                                                                |                                                                                             |
+
+- Marcar uma notificação como lida
+
+| ENDPOINT           | MÉTHOD | PARAMS | URL PARAMS | SUCCESS RESPONSE                                        | ERROR RESPONSE |
+|--------------------|--------|--------|------------|---------------------------------------------------------|----------------|
+| /notifications/:id | `PUT`  | id     | -          | **Code**: 200 <br/> __Content__:   ` { Notification } ` | -              |
+|                    |        |        |            |                                                         |                |
+|                    |        |        |            |                                                         |                |
