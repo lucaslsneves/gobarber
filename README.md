@@ -4,7 +4,7 @@ BaseURL : http://localhost:3334
 
 ## User
 
-- Criar usuário
+- Cria um usuário
 
 | ENDPOINT | METHOD   | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                | ERROR RESPONSE                                                                                                                                                                                |
 |--------------|----------|--------|------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@ BaseURL : http://localhost:3334
 
 ## Session
 
-- Logar na aplicação
+- Loga na aplicação
 
 | ENDPOINT| MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                         | ERROR RESPONSE                                                                                                                                                                                                                                                                                              |
 |--------------|---------|--------|------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ BaseURL : http://localhost:3334
 
 ## File
 
-- Salvar avatar
+- Salva avatar
 
 Para esta requisição você terá que enviar uma imagem,se você não sabe como enviar imagens usando um Http client tool aqui vai um exemplo utilizando o Insomnia. A key deve se chamar "file"
 
