@@ -2,7 +2,7 @@
 
 BaseURL : http://localhost:3334
 
-## Users
+## User
 
 - Criar usuário
 
@@ -20,7 +20,7 @@ BaseURL : http://localhost:3334
 |              |         |        |            |                                                                                          |                                                                                                                                                                                                                                                                                                                       |
 |              |         |        |            |                                                                                          |                                                                                                                                                                                                                                                                                                                       |
 
-## Sessions
+## Session
 
 - Logar na aplicação
 
@@ -30,7 +30,7 @@ BaseURL : http://localhost:3334
 |              |         |        |            |                                                                                                                          |                                                                                                                                                                                                                                                                                                             |
 |              |         |        |            |                                                                                                                          |                                                                                                                                                                                                                                                                                                             |
 
-## Files
+## File
 
 - Salvar avatar
 
@@ -43,3 +43,32 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 | /files | ``POST`` | -   | -          | **Code**: 200 <br/> __Content__:` {  File }`  | -              |
 |              |         |        |            |                                               |                |
 |              |         |        |            |                                               |                |
+
+## Provider
+
+- Lista todos os Users que são providers
+
+| __ENDPOINT__ | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                   | ERROR RESPONSE |
+|--------------|---------|--------|------------|--------------------------------------------------------------------|----------------|
+| /providers   | ``GET`` | -      | -          | **Code**: 200 <br/> __Content__:  Array de Users que são providers | -              |
+|              |         |        |            |                                                                    |                |
+|              |         |        |            |                                                                    |                |
+
+## Appointment
+
+- Lista todos os agendamentos do usuário logado
+
+| ENDPOINT      | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                                                                                                                                                      | ERROR RESPONSE |
+|---------------|---------|--------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| /appointments | ``GET`` | -      | page       | **Code**: 200 <br/> __Content__:   `[ { past: Appointment (True se o agendamento já tiver passado) cancelable: Appointment, id: Appointment (Id do appointment) provider: { id: User, name: User, avatar: { url: File, id: File, path: File } } } ] ` | -              |
+|               |         |        |            |                                                                                                                                                                                                                                                       |                |
+|               |         |        |            |                                                                                                                                                                                                                                                       |                |
+
+
+- Deleta um agendamento
+
+| ENDPOINT      | MÉTHOD     | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                    | ERROR RESPONSE                                                                                                                                                                                                                                                     |
+|---------------|------------|--------|------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /appointments | ``DELETE`` | id     | -          | **Code**: 200 <br/> __Content__:   ` { Appointment, provider: { name: User, email: User }, user: { name: User } } ` | __Code__: 401 <br/>   __Content__: ` { error:  ' You don't have permission to cancel this appointment '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' You can only cancel appointments 2 hours in advance ' }`   |
+|               |            |        |            |                                                                                                                     |                                                                                                                                                                                                                                                                    |
+|               |            |        |            |                                                                                                                     |                                                                                                                                                                                                                                                                    |
