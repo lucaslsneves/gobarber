@@ -1,3 +1,27 @@
+# GoBarber Server
+ This is the back-end of the MindCast App.
+
+It's a RESTful API built with NodeJS + Express + MongoDB that receive all the data related with authors and podcats and record/provide to the client all this data through a REST API.
+
+The main purpose of this API is stream audio files, podcasts were selected by me just to give some context to the app. So, you can reuse all this code to upload/stream a audio (just tested with .mp3) file and use inside your own context (music app, your own podcasts or whatever!).
+
+# Iniciando
+
+## Pré requisitos
+
+## Instalando
+
+### Clonando o repositório
+
+`git clone`
+`cd gobarber`
+
+### Instalando repositórios
+
+`yarn`
+
+
+
 # Rotas
 
 BaseURL : http://localhost:3334
@@ -142,3 +166,7 @@ http://localhost:3334/providers/4/available?date=1580152344759
 | /reset_password | `POST` | -      | -   | **Code**: 200 <br/> __Content__:   ` { message: 'Password changed successfully ' } ` | __Code__: 400<br/>   __Content__: ` { error: ' Validation fails ' }` <br/><br/> or <br/><br/> __Code__: 400<br/>   __Content__: ` { error: ' Invalid Token ' }`  <br/><br/> or <br/><br/> __Code__: 400<br/>   __Content__: ` { error: ' Token expired,generate another one ' }` |
 |                 |         |        |            |                                                                                      |                                                                                                                                                                                                                                                                                  |
 |                 |         |        |            |                                                                                      |                                                                                                                                                                                                                                                                                  |
+
+# Models
+
+# Construído com
