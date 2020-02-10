@@ -1,9 +1,9 @@
 # GoBarber Server
- This is the back-end of the MindCast App.
+ Este é o back-end do GoBarber ReactJS.
 
-It's a RESTful API built with NodeJS + Express + MongoDB that receive all the data related with authors and podcats and record/provide to the client all this data through a REST API.
+É uma REST Api construída em NodeJS + Express que recebe dados de agendamentos em barbearias e disponibiliza aos clientes e prestadores de serviço via REST Api
 
-The main purpose of this API is stream audio files, podcasts were selected by me just to give some context to the app. So, you can reuse all this code to upload/stream a audio (just tested with .mp3) file and use inside your own context (music app, your own podcasts or whatever!).
+A idéia princinpal desta API é permitir com que clientes possam agendar e desmarcar horários com os prestadores de serviço e estes possam tem acesso a sua agenda de compromissos (horários vagos e ocupados) de acordo com a data selecionada.
 
 # Iniciando
 
