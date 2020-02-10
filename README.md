@@ -83,4 +83,4 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 
 ## Schedule
 
-- Lista todos agendamentos do prestador de serviços logado da data passada por query params
+- Listar todos agendamentos do prestador de serviços logado da data passada por query params
