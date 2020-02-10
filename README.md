@@ -84,3 +84,9 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 ## Schedule
 
 - Listar todos agendamentos do prestador de serviços logado da data passada por query params
+
+| ENDPOINT  | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                             | ERROR RESPONSE                                                                 |
+|-----------|---------|--------|------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| /schedule | ``GET`` | -      | date       | **Code**: 200 <br/> __Content__:   ` { Appointment, user: { name: User } } ` | __Code__: 401 <br/>   __Content__: ` { error: ' User is not a provider ' }`    |
+|           |         |        |            |                                                                              |                                                                                |
+|           |         |        |            |                                                                              |                                                                                |
