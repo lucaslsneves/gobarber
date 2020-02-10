@@ -4,7 +4,7 @@ BaseURL : http://localhost:3334
 
 ## User
 
-- Cria um usuário
+- Criar um usuário
 
 | ENDPOINT | METHOD   | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                | ERROR RESPONSE                                                                                                                                                                                |
 |--------------|----------|--------|------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@ BaseURL : http://localhost:3334
 
 ## Session
 
-- Loga na aplicação
+- Logar na aplicação
 
 | ENDPOINT| MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                         | ERROR RESPONSE                                                                                                                                                                                                                                                                                              |
 |--------------|---------|--------|------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ BaseURL : http://localhost:3334
 
 ## File
 
-- Salva avatar
+- Salvar avatar
 
 Para esta requisição você terá que enviar uma imagem,se você não sabe como enviar imagens usando um Http client tool aqui vai um exemplo utilizando o Insomnia. A key deve se chamar "file"
 
@@ -46,7 +46,7 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 
 ## Provider
 
-- Lista todos os Users que são providers
+- Listar todos os Users que são providers
 
 | __ENDPOINT__ | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                   | ERROR RESPONSE |
 |--------------|---------|--------|------------|--------------------------------------------------------------------|----------------|
@@ -56,7 +56,7 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 
 ## Appointment
 
-- Lista todos os agendamentos do usuário logado
+- Listar todos os agendamentos do usuário logado
 
 | ENDPOINT      | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                                                                                                                                                      | ERROR RESPONSE |
 |---------------|---------|--------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
@@ -65,10 +65,18 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 |               |         |        |            |                                                                                                                                                                                                                                                       |                |
 
 
-- Deleta um agendamento
+- Deletar um agendamento
 
 | ENDPOINT      | MÉTHOD     | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                    | ERROR RESPONSE                                                                                                                                                                                                                                                     |
 |---------------|------------|--------|------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /appointments | ``DELETE`` | id     | -          | **Code**: 200 <br/> __Content__:   ` { Appointment, provider: { name: User, email: User }, user: { name: User } } ` | __Code__: 401 <br/>   __Content__: ` { error:  ' You don't have permission to cancel this appointment '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' You can only cancel appointments 2 hours in advance ' }`   |
 |               |            |        |            |                                                                                                                     |                                                                                                                                                                                                                                                                    |
 |               |            |        |            |                                                                                                                     |                                                                                                                                                                                                                                                                    |
+
+- Criar um agendamento
+
+| ENDPOINT      | MÉTHOD   | PARAMS | URL PARAMS | SUCCESS RESPONSE                                       | ERROR RESPONSE                                                                                                                                                                                                                                                                                                                                        |
+|---------------|----------|--------|------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /appointments | ``POST`` | -      | -          | **Code**: 200 <br/> __Content__:   ` { Appointment } ` | __Code__: 400 <br/>   __Content__: ` { error: ' Validation Fails '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' You can only create appointments with providers ' }` <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: `  {  error: ' Past dates are not permitted ' }`   |
+|               |          |        |            |                                                        |                                                                                                                                                                                                                                                                                                                                                       |
+|               |          |        |            |                                                        |                                                                                                                                                                                                                                                                                                                                                       |
