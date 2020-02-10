@@ -13,7 +13,7 @@ A idéia princinpal desta API é permitir com que clientes possam agendar e desm
 
 ### Clonando o repositório
 
-`git clone`
+`git clone` <br/>
 `cd gobarber`
 
 ### Instalando repositórios
