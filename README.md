@@ -83,7 +83,7 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 
 ## Schedule
 
-- Listar todos agendamentos do prestador de serviços logado da data passada por query params
+- Listar todos agendamentos do prestador de serviços logado,da data passada por query params
 
 http://localhost:3334/schedule?date=2020-01-31T00%3A00%3A00-03%3A00
 
@@ -110,3 +110,17 @@ http://localhost:3334/schedule?date=2020-01-31T00%3A00%3A00-03%3A00
 | /notifications/:id | `PUT`  | id     | -          | **Code**: 200 <br/> __Content__:   ` { Notification } ` | -              |
 |                    |        |        |            |                                                         |                |
 |                    |        |        |            |                                                         |                |
+
+## Available
+
+http://localhost:3334/providers/4/available?date=1580152344759
+
+- Listar todos os horários disponíveis de um determinado prestador de servido em determinda data
+
+| ENDPOINT                         | MÉTHOD | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                                                                              | ERROR RESPONSE                                                      |
+|----------------------------------|--------|--------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| /providers/:providerId/available | `GET`  | id     | date       | **Code**: 200 <br/> __Content__:   ` { [ { time: Data formatada para usuário, value: Data com fuso horário, available: Se o horário estiver disponível retornará true } ] } ` | __Code__: 401 <br/>   __Content__: ` { error: ' Invalid date ' }`   |
+|                                  |        |        |            |                                                                                                                                                                               |                                                                     |
+|                                  |        |        |            |                                                                                                                                                                               |                                                                     |
+
+
