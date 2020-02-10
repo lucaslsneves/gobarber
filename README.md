@@ -24,9 +24,9 @@ BaseURL : http://localhost:3334
 
 - Logar na aplicação
 
-| __ENDPOINT__ | MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                         | ERROR RESPONSE                                                                                                                                                                                                                                                                                              |
+| ENDPOINT| MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                                                                                                         | ERROR RESPONSE                                                                                                                                                                                                                                                                                              |
 |--------------|---------|--------|------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /users/:id   | ``PUT`` | id     | -          | **Code**: 200 <br/> __Content__:` { `<br/> `user: {`<br/>` id: User, name: User, email: User, provider: User, avatar: File`<br/> `}`<br/>`token: JWT`  `}`  | __Code__: 400 <br/>   __Content__: ` { error:  ' Validation fails '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' User not found ' }` <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: `{ error:  ' Password doesnt match ' }`  |
+| /sessions  | ``POST`` | -     | -          | **Code**: 200 <br/> __Content__:` { `<br/> `user: {`<br/>` id: User, name: User, email: User, provider: User, avatar: File`<br/> `}`<br/>`token: JWT`  `}`  | __Code__: 400 <br/>   __Content__: ` { error:  ' Validation fails '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' User not found ' }` <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: `{ error:  ' Password doesnt match ' }`  |
 |              |         |        |            |                                                                                                                          |                                                                                                                                                                                                                                                                                                             |
 |              |         |        |            |                                                                                                                          |                                                                                                                                                                                                                                                                                                             |
 
@@ -37,3 +37,9 @@ BaseURL : http://localhost:3334
 Para esta requisição você terá que enviar uma imagem,se você não sabe como enviar imagens usando um Http client tool aqui vai um exemplo utilizando o Insomnia. A key deve se chamar "file"
 
 ![untitled (1)](https://user-images.githubusercontent.com/53489804/74176232-0845b900-4c16-11ea-9f54-36c428a67b55.png)
+
+|ENDPOINT| MÉTHOD  | PARAMS | URL PARAMS | SUCCESS RESPONSE                              | ERROR RESPONSE |
+|--------------|---------|--------|------------|-----------------------------------------------|----------------|
+| /files | ``POST`` | -   | -          | **Code**: 200 <br/> __Content__:` {  File }`  | -              |
+|              |         |        |            |                                               |                |
+|              |         |        |            |                                               |                |
