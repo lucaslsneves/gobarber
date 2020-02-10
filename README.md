@@ -80,3 +80,7 @@ Para esta requisição você terá que enviar uma imagem,se você não sabe como
 | /appointments | ``POST`` | -      | -          | **Code**: 200 <br/> __Content__:   ` { Appointment } ` | __Code__: 400 <br/>   __Content__: ` { error: ' Validation Fails '  }`  <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: ` {  error: ' You can only create appointments with providers ' }` <br/><br/>                   or <br/><br/> __Code__: 401 <br/> __Content__: `  {  error: ' Past dates are not permitted ' }`   |
 |               |          |        |            |                                                        |                                                                                                                                                                                                                                                                                                                                                       |
 |               |          |        |            |                                                        |                                                                                                                                                                                                                                                                                                                                                       |
+
+## Schedule
+
+- Lista todos agendamentos do prestador de serviços logado da data passada por query params
