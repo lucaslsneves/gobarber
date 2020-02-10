@@ -1,26 +1,40 @@
 # GoBarber Server
  Este é o back-end do GoBarber ReactJS.
 
-É uma REST Api construída em NodeJS + Express que recebe dados de agendamentos em barbearias e disponibiliza aos clientes e prestadores de serviço via REST Api
+É uma REST Api construída em NodeJS + Express + MongoDB + PostegreSQL + Redis que recebe dados de agendamentos em barbearias e disponibiliza aos clientes e prestadores de serviço via REST Api
 
 A idéia princinpal desta API é permitir com que clientes possam agendar e desmarcar horários com os prestadores de serviço e estes possam tem acesso a sua agenda de compromissos (horários vagos e ocupados) de acordo com a data selecionada.
 
 # Iniciando
 
 ## Pré requisitos
+Para rodar este projeto você irá precisar NodeJS 10+ instalado. Para ter acesso aos bancos de dados você terá que ter o docker instalado e ter as seguintes imagens rodando:
 
+- PostgreSQL 
+
+- MongoDB 
+
+- Redis
+
+Agora preencha as variavéis ambiente do arquivo **.env**
 ## Instalando
 
 ### Clonando o repositório
 
-`git clone` <br/>
-`cd gobarber`
+`$ git clone git@github.com:lucasluz99/gobarber.git` <br/>
+`$ cd gobarber`
 
 ### Instalando repositórios
 
-`yarn`
+`$ yarn`
 
+### Rodando a aplicação em modo de desenvolvimento
 
+`$ yarn dev`
+
+### Rodando a Fila (Background Jobs) para envio de emails em segundo plano
+
+`$ yarn queue`
 
 # Rotas
 
