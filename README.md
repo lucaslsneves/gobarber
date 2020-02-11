@@ -5,6 +5,12 @@
 
 A idéia princinpal desta API é permitir com que clientes possam agendar e desmarcar horários com os prestadores de serviço e estes possam tem acesso a sua agenda de compromissos (horários vagos e ocupados) de acordo com a data selecionada.
 
+# Sobre o projeto
+
+Este projeto faz parte do meu potifólio pessoal. Criei ele no curso GoStack da rocketseat.
+Como forma de me desafiar e aplicar o conteúdo que aprendi no curso desenvolvi por conta própria a funcionalidade de 
+recuperação de senha através do envio de um email de recuperação. O envio deste email é feita em segundo plano (Background Jobs) através de uma fila.Também escrevi toda a documentação.
+
 # Iniciando
 
 ## Pré requisitos
