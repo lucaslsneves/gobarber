@@ -20,7 +20,7 @@ Inicializando container <br/><br/>
 `$ docker run --name mongobarber -p 27017:27017 -d -t mongo`<br/><br/>
 Para verificar se o container está rodando execute,este comando lista todos containers em execução<br/><br/>
 `$ docker ps`
-### Redis
+### Redis Alpine
 Inicializando container <br/><br/>
 `$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine<br/><br/>
 Para verificar se o container está rodando execute,este comando lista todos containers em execução<br/><br/>
