@@ -16,9 +16,9 @@ recuperação de senha através do envio de um email de recuperação. O envio d
 ## Pré requisitos
 Para rodar este projeto você irá precisar NodeJS 10+ instalado. Para ter acesso aos bancos de dados você terá que ter o docker instalado e ter os seguintes containers inicializados:
 
-### PostgreSQL 11
+### PostgreSQL
 Inicializando container <br/><br/>
-`$ docker run --name database -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11`<br/><br/>
+`$ docker run --name database -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres`<br/><br/>
 Para verificar se o container está rodando execute,este comando lista todos containers em execução <br/><br/>
 `$ docker ps`
 ### MongoDB 
