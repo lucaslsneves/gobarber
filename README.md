@@ -192,21 +192,21 @@ http://localhost:3334/providers/4/available?date=1580152344759
 
 # Models
 
-## User
+## Users
 
-> *name*: Nome do usuário
+> *name*: dome do usuário
 
-> *email*: Email do usuário
+> *email*: dmail do usuário
 
-> password: Senha do usuário
+> password: senha do usuário
 
-> password_hash: Senha do usuário criptografada
+> password_hash: senha do usuário criptografada
 
 > provider: `true` se o usuário for um prestador de serviço e `false` se for um cliente
 
-> password_reset_token: Token gerado para recuperação de senha
+> password_reset_token: token gerado para recuperação de senha
 
-> password_reset_expires: Data de expiração do token de recuperação de senha
+> password_reset_expires: data de expiração do token de recuperação de senha
 
 ```
 {
@@ -218,5 +218,49 @@ provider: Sequelize.BOOLEAN,
 password_reset_token: Sequelize.STRING,
 password_reset_expires: Sequelize.DATE,
 }
+```
+
+## Files
+
+> *name*: nome real da imagem
+
+> *path*: nome de como a imagem foi salva
+
+> *url*: url da imagem
+
+```
+name: Sequelize.STRING,
+path: Sequelize.STRING,
+url: {
+type: Sequelize.VIRTUAL,
+get() {
+  return `${process.env.APP_URL}/files/${this.path}`;
+}
+```
+
+## Appointments
+
+> *date*: data do agendamento
+
+> *canceled_at*: data de cancelamento do agendamento
+
+> *past*: guarda se o agendamento já ocorreu (data passada)
+
+> *cancelable*: guarda se o agendamento pode ser cancelado
+
+```
+date: Sequelize.DATE,
+canceled_at: Sequelize.DATE,
+past: {
+  type: Sequelize.VIRTUAL,
+  get() {
+    return isBefore(this.date, new Date());
+  },
+},
+cancelable: {
+  type: Sequelize.VIRTUAL,
+  get() {
+    return isBefore(new Date(), subHours(this.date, 2));
+  }
 ```
 # Construído com
