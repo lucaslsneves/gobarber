@@ -13,12 +13,18 @@ Para rodar este projeto você irá precisar NodeJS 10+ instalado. Para ter acess
 ### PostgreSQL 11
 Inicializando container <br/><br/>
 `$ docker run --name database -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11`<br/><br/>
-Para verificar se o container está rodando execute <br/><br/>
+Para verificar se o container está rodando execute,este comando lista todos containers em execução <br/><br/>
 `$ docker ps`
 ### MongoDB 
-
+Inicializando container <br/><br/>
+`$ docker run --name mongobarber -p 27017:27017 -d -t mongo`<br/><br/>
+Para verificar se o container está rodando execute,este comando lista todos containers em execução<br/><br/>
+`$ docker ps`
 ### Redis
-
+Inicializando container <br/><br/>
+`$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine<br/><br/>
+Para verificar se o container está rodando execute,este comando lista todos containers em execução<br/><br/>
+`$ docker ps`
 Agora preencha as variavéis ambiente do arquivo **.env**
 ## Instalando
 
