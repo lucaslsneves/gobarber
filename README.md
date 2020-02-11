@@ -12,7 +12,7 @@ Para rodar este projeto você irá precisar NodeJS 10+ instalado. Para ter acess
 
 ### PostgreSQL 11
 Inicializando container <br/><br/>
-`$ docker run --name container-name -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11`<br/><br/>
+`$ docker run --name database -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11`<br/><br/>
 Para verificar se o container está rodando execute <br/><br/>
 `$ docker ps`
 ### MongoDB 
