@@ -22,7 +22,7 @@ Para verificar se o container está rodando execute,este comando lista todos con
 `$ docker ps`
 ### Redis Alpine
 Inicializando container <br/><br/>
-`$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine<br/><br/>
+`$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine`<br/><br/>
 Para verificar se o container está rodando execute,este comando lista todos containers em execução<br/><br/>
 `$ docker ps`
 Agora preencha as variavéis ambiente do arquivo **.env**
