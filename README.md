@@ -47,7 +47,7 @@ Agora preencha as variavéis ambiente do arquivo **.env**
 
 # Rotas
 
-BaseURL : http://localhost:3334
+> *URL Base*: http://localhost:3334
 
 ## User
 
