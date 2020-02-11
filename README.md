@@ -296,3 +296,14 @@ cancelable: {
   }
 ```
 # Construído com
+
+- [NodeJS](https://nodejs.org/en/)
+- [express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [mongoose](https://mongoosejs.com/)
+- [nodemon](https://nodemon.io/)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [multer](https://github.com/expressjs/multer)
+- [eslint](https://eslint.org/)
+- [prettier](https://github.com/prettier/prettier)
+
