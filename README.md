@@ -35,7 +35,7 @@ Agora preencha as variavéis ambiente do arquivo **.env**
 
 `$ yarn dev`
 
-### Rodando a Fila (Background Jobs) para envio de emails em segundo plano
+### Rodando a Fila para envio de emails em segundo plano (Background Jobs)
 
 `$ yarn queue`
 
