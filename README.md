@@ -1,7 +1,7 @@
 # GoBarber Server
  Este é o back-end do GoBarber ReactJS.
 
-É uma REST Api construída em NodeJS + Express + MongoDB + PostegreSQL + Redis que recebe dados de agendamentos em barbearias e disponibiliza aos clientes e prestadores de serviço via REST Api
+É uma REST Api construída em NodeJS + Express + MongoDB + PostegreSQL + Redis que recebe dados de agendamentos de barbearias e disponibiliza aos clientes e prestadores de serviço via REST Api
 
 A idéia princinpal desta API é permitir com que clientes possam agendar e desmarcar horários com os prestadores de serviço e estes possam tem acesso a sua agenda de compromissos (horários vagos e ocupados) de acordo com a data selecionada.
 
