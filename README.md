@@ -208,7 +208,7 @@ http://localhost:3334/providers/4/available?date=1580152344759
 
 > password_reset_expires: Data de expiração do token de recuperação de senha
 
-```json
+```
 {
 name: Sequelize.STRING,
 email: Sequelize.STRING,
