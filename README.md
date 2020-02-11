@@ -192,4 +192,31 @@ http://localhost:3334/providers/4/available?date=1580152344759
 
 # Models
 
+## User
+
+> *name*: Nome do usuário
+
+> *email*: Email do usuário
+
+> password: Senha do usuário
+
+> password_hash: Senha do usuário criptografada
+
+> provider: `true` se o usuário for um prestador de serviço e `false` se for um cliente
+
+> password_reset_token: Token gerado para recuperação de senha
+
+> password_reset_expires: Data de expiração do token de recuperação de senha
+
+```json
+{
+name: Sequelize.STRING,
+email: Sequelize.STRING,
+password: Sequelize.VIRTUAL,
+password_hash: Sequelize.STRING,
+provider: Sequelize.BOOLEAN,
+password_reset_token: Sequelize.STRING,
+password_reset_expires: Sequelize.DATE,
+}
+```
 # Construído com
