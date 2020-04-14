@@ -36,7 +36,7 @@ Agora preencha as variavéis ambiente do arquivo **.env**
 
 ### Clonando o repositório
 
-`$ git clone git@github.com:lucasluz99/gobarber.git` <br/>
+`$ git clone https://github.com/lucasluz99/gobarber.git` <br/>
 `$ cd gobarber`
 
 ### Instalando repositórios
