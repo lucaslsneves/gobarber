@@ -14,7 +14,7 @@ A idéia princinpal desta API é permitir com que clientes possam agendar e desm
 # Iniciando
 
 ## Pré requisitos
-Para rodar este projeto você irá precisar NodeJS 10+ instalado. Para ter acesso aos bancos de dados você terá que ter o docker instalado e ter os seguintes containers inicializados:
+Para rodar este projeto você irá precisar NodeJS 10+ instalado e banco de dados Postgres.
 
 ### PostgreSQL
 Inicializando container <br/><br/>
